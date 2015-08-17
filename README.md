@@ -1,6 +1,6 @@
 # bullDDOSer
 
-[![Build Status](https://secure.travis-ci.org/GNSPS/bull-ddoser.png?branch=master)](https://travis-ci.org/GNSPS/bull-ddoser) [![Join the chat at https://gitter.im/GNSPS/bullDDOSer](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/GNSPS/bullDDOSer?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[ ![Codeship Status for GNSPS/bullDDOSer](https://codeship.com/projects/70780ff0-2671-0133-c2bf-42218616331f/status?branch=master)](https://codeship.com/projects/97106) [![Join the chat at https://gitter.im/GNSPS/bullDDOSer](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/GNSPS/bullDDOSer?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 ===
 
 A JS library to be used on the browser for stress-testing. Share you DDOS love!
