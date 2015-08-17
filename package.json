@@ -1,7 +1,7 @@
 {
     "name": "bullddoser",
     "author": "Gonçalo Sá",
-    "version": "0.0.0",
+    "version": "0.1.0",
     "main": "dist/bullddoser.js",
     "repository": {
         "type": "git",

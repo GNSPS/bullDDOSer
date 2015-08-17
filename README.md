@@ -11,6 +11,7 @@ A JS library to be used on the browser for stress-testing. Share you DDOS love!
 
 ```javascript
 
+
 ```
 
 ## Installation
